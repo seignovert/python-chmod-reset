@@ -3,10 +3,10 @@ CHMOD reset
 ===============================
 |Build| |Coverage| |PyPI| |Status| |Version| |Python| |License|
 
-.. |Build| image:: https://travis-ci.org/seignovert/chmod_reset.svg?branch=master
-        :target: https://travis-ci.org/seignovert/chmod_reset
-.. |Coverage| image:: https://coveralls.io/repos/github/seignovert/chmod_reset/badge.svg?branch=master
-        :target: https://coveralls.io/github/seignovert/chmod_reset?branch=master
+.. |Build| image:: https://travis-ci.org/seignovert/python-chmod-reset.svg?branch=master
+        :target: https://travis-ci.org/seignovert/python-chmod-reset
+.. |Coverage| image:: https://coveralls.io/repos/github/seignovert/python-chmod-reset/badge.svg?branch=master
+        :target: https://coveralls.io/github/seignovert/python-chmod-reset?branch=master
 .. |PyPI| image:: https://img.shields.io/badge/PyPI-chmod_reset-blue.svg
         :target: https://pypi.python.org/project/chmod_reset
 .. |Status| image:: https://img.shields.io/pypi/status/chmod_reset.svg?label=Status
