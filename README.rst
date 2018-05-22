@@ -1,18 +1,18 @@
 ===============================
-Reset Chmod
+CHMOD reset
 ===============================
 |Build| |Coverage| |PyPI| |Status| |Version| |Python| |License|
 
-.. |Build| image:: https://travis-ci.org/seignovert/reset_chmod.svg?branch=master
-        :target: https://travis-ci.org/seignovert/reset_chmod
-.. |Coverage| image:: https://coveralls.io/repos/github/seignovert/reset_chmod/badge.svg?branch=master
-        :target: https://coveralls.io/github/seignovert/reset_chmod?branch=master
-.. |PyPI| image:: https://img.shields.io/badge/PyPI-reset_chmod-blue.svg
-        :target: https://pypi.python.org/project/reset_chmod
-.. |Status| image:: https://img.shields.io/pypi/status/reset_chmod.svg?label=Status
-.. |Version| image:: https://img.shields.io/pypi/v/reset_chmod.svg?label=Version
-.. |Python| image:: https://img.shields.io/pypi/pyversions/reset_chmod.svg?label=Python
-.. |License| image:: https://img.shields.io/pypi/l/reset_chmod.svg?label=License
+.. |Build| image:: https://travis-ci.org/seignovert/chmod_reset.svg?branch=master
+        :target: https://travis-ci.org/seignovert/chmod_reset
+.. |Coverage| image:: https://coveralls.io/repos/github/seignovert/chmod_reset/badge.svg?branch=master
+        :target: https://coveralls.io/github/seignovert/chmod_reset?branch=master
+.. |PyPI| image:: https://img.shields.io/badge/PyPI-chmod_reset-blue.svg
+        :target: https://pypi.python.org/project/chmod_reset
+.. |Status| image:: https://img.shields.io/pypi/status/chmod_reset.svg?label=Status
+.. |Version| image:: https://img.shields.io/pypi/v/chmod_reset.svg?label=Version
+.. |Python| image:: https://img.shields.io/pypi/pyversions/chmod_reset.svg?label=Python
+.. |License| image:: https://img.shields.io/pypi/l/chmod_reset.svg?label=License
 
 *Python package to reset chmod recursively*
 
@@ -22,24 +22,25 @@ With ``pip``:
 
 .. code:: bash
 
-    $ pip install reset_chmod
+    $ pip install chmod_reset
 
 With the ``source files``:
 
 .. code:: bash
 
-    $ git clone https://github.com/seignovert/reset_chmod.git
-    $ cd reset_chmod ; python setup.py install
+    $ git clone https://github.com/seignovert/python-chmod-reset.git
+    $ cd chmod_reset ; python setup.py install
 
 Usage
 ------
 
 .. code:: bash
 
-    reset-chmod <FOLDER_NAME>
+    reset-chmod -h # For help
+    reset-chmod [-q] <FOLDER_NAME> # [-q] `quiet` optional
 
 .. code:: python
 
-    >>> import reset_chmod
+    >>> import chmod_reset
 
-    >>> reset_chmod.scan('.')
+    >>> chmod_reset.scan('.')

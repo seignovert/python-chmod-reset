@@ -10,7 +10,7 @@ DIR_stats = (stat.S_IFDIR |
 FILE_stats = (stat.S_IRUSR | stat.S_IWUSR |
               stat.S_IRGRP | stat.S_IROTH)
 
-from reset_chmod.__main__ import main
+from chmod_reset.__main__ import main
 
 folder_name = 'tests/folder'
 file_name = 'tests/folder/file'
@@ -22,3 +22,7 @@ def test_main():
     main([folder_name])
     assert os.stat(folder_name).st_mode == DIR_stats
     assert stat.S_IMODE(os.stat(file_name).st_mode) == FILE_stats
+
+def test_err():
+    with pytest.raises(ValueError):
+        main(['wrong'])

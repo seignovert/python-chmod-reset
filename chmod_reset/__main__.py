@@ -2,7 +2,7 @@
 import os
 import argparse
 
-from .reset_chmod import scan
+from .chmod_reset import scan
 
 def main(argv=None):
     '''Main entry point'''
