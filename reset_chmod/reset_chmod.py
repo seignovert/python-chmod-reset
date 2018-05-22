@@ -4,26 +4,20 @@ import os
 CHMOD_FILE = 0o644 # rw-r--r--
 CHMOD_DIR =  0o755 # rwxr-xr-x
 
-def scan(name, verbose=True):
-    if os.path.islink(name):
+def scan(path, verbose=True):
+    '''Change recursively folder/file/link permisisons'''
+    if os.path.islink(path):
         if verbose:
-            print('L > {}'.format(name))
-    elif os.path.isfile(name):
+            print('L > {}'.format(path))
+    elif os.path.isfile(path):
         if verbose:
-            print('F > {}'.format(name))
-        os.chmod(name, CHMOD_FILE)
-    elif os.path.isdir(name):
+            print('F > {}'.format(path))
+        os.chmod(path, CHMOD_FILE)
+    elif os.path.isdir(path):
         if verbose:
-            print('D > {}'.format(name))
-        os.chmod(name, CHMOD_DIR)
-        for sub in os.listdir(name):
-            scan(os.path.join(name,sub))
+            print('D > {}'.format(path))
+        os.chmod(path, CHMOD_DIR)
+        for sub in os.listdir(path):
+            scan(os.path.join(path, sub), verbose)
     else:
-        raise ValueError('`{}` is neither a file nor a directory'.format(name))
-
-if __name__ == '__main__':
-    import sys
-
-    name = '.' if len(sys.argv) <= 1 else sys.argv[1]
-
-    scan(name)
+        raise ValueError('`{}` is neither a file nor a directory'.format(path))
